@@ -1,0 +1,114 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Node",
+"class": "AutoloadBase",
+"language": "GDScript",
+"path": "res://AbstractClasses/AutoloadBase.gd"
+}, {
+"base": "Sprite",
+"class": "BreakableSpriteBase",
+"language": "GDScript",
+"path": "res://AbstractClasses/BreakableSpriteBase.gd"
+}, {
+"base": "Resource",
+"class": "ChapterBase",
+"language": "GDScript",
+"path": "res://AbstractClasses/ChapterBase.gd"
+}, {
+"base": "Area2D",
+"class": "InteractAreaBase",
+"language": "GDScript",
+"path": "res://AbstractClasses/InteractAreaBase.gd"
+}, {
+"base": "Control",
+"class": "MenuBase",
+"language": "GDScript",
+"path": "res://AbstractClasses/GameMenuBase.gd"
+}, {
+"base": "Button",
+"class": "MenuOptionsBase",
+"language": "GDScript",
+"path": "res://AbstractClasses/MenuOptionsBase.gd"
+}, {
+"base": "Position2D",
+"class": "PathPoint",
+"language": "GDScript",
+"path": "res://AbstractClasses/PathPointBase.gd"
+}, {
+"base": "StateBase",
+"class": "PlayerStateBase",
+"language": "GDScript",
+"path": "res://AbstractClasses/PlayerStateBase.gd"
+}, {
+"base": "RayCast2D",
+"class": "RayCastBase",
+"language": "GDScript",
+"path": "res://AbstractClasses/RayCastBase.gd"
+}, {
+"base": "AnimatedSprite",
+"class": "SFX_AnimationBase",
+"language": "GDScript",
+"path": "res://AbstractClasses/SFX_AnimationBase.gd"
+}, {
+"base": "Node",
+"class": "StateBase",
+"language": "GDScript",
+"path": "res://AbstractClasses/StateBase.gd"
+}, {
+"base": "Node",
+"class": "StatesMachine",
+"language": "GDScript",
+"path": "res://AbstractClasses/StateMachine.gd"
+}, {
+"base": "MenuBase",
+"class": "SubMenuBase",
+"language": "GDScript",
+"path": "res://AbstractClasses/SubMenuBase.gd"
+} ]
+_global_script_class_icons={
+"AutoloadBase": "",
+"BreakableSpriteBase": "",
+"ChapterBase": "",
+"InteractAreaBase": "",
+"MenuBase": "",
+"MenuOptionsBase": "",
+"PathPoint": "",
+"PlayerStateBase": "",
+"RayCastBase": "",
+"SFX_AnimationBase": "",
+"StateBase": "",
+"StatesMachine": "",
+"SubMenuBase": ""
+}
+
+[application]
+
+config/name="Fake News"
+run/main_scene="res://Scenes/Game.tscn"
+config/icon="res://icon.png"
+
+[autoload]
+
+DIALOGUE="*res://Autoloads/Dialogue/DialogueContainter.gd"
+
+[display]
+
+window/size/width=640
+window/size/height=360
+
+[locale]
+
+translations=PoolStringArray( "res://Autoloads/Dialogue/Text.en.translation", "res://Autoloads/Dialogue/Text.fr.translation" )
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"
