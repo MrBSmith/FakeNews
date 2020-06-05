@@ -9,3 +9,30 @@ script = ExtResource( 1 )
 wait_time = 30.0
 
 [node name="GUI" type="CanvasLayer" parent="."]
+
+[node name="UI" type="Control" parent="GUI"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Questions" type="Control" parent="GUI/UI"]
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_bottom = -1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Answers" type="Control" parent="GUI/UI"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -217.5
+margin_top = -190.0
+margin_right = 217.5
+__meta__ = {
+"_edit_use_anchors_": false
+}

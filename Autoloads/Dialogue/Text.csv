@@ -5,3 +5,9 @@ DIAL_QUIZZ_3;;Well, nervemind what I said before: This room is NOT safe. Now sta
 DIAL_QUIZZ_4;;Do you see these purple crates? DON'T TOUCH IT! This is where I stock my precious Xion energy.
 DIAL_QUIZZ_5;;You see that blue flame that you've just lit ?! That's how my little time machine works. It can gets you back to the last blue flame you've met. Make sure not to miss the next ones!
 DIAL_QUIZZ_6;;The exit is near! All you need to do is to trigger the buttons and the door will open. But you won't be safer in the next area: continue running fast or the Xion will fry your precious circuits.
+;;
+;;
+DIAL_QUIZZ_1_0;;Pouet1
+DIAL_QUIZZ_1_1;;Pouet2
+DIAL_QUIZZ_1_2;;Pouet3[v]
+DIAL_QUIZZ_1_3;;Pouet4

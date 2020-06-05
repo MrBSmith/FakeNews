@@ -21,8 +21,10 @@ tracks/0/keys = {
 }
 
 [node name="Button" type="NinePatchRect"]
-margin_right = 16.0
-margin_bottom = 16.0
+margin_left = 16.0
+margin_top = 16.0
+grow_horizontal = 2
+grow_vertical = 2
 rect_min_size = Vector2( 16, 16 )
 texture = ExtResource( 1 )
 patch_margin_left = 5

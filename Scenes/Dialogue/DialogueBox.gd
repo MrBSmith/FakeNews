@@ -15,13 +15,12 @@ signal finished_typing
 func _ready():
 	var _err = timer_node.connect("timeout", self, "on_timer_timeout")
 	_err = reading_timer_node.connect("timeout", self, "on_reading_timer_timeout")
-	
-	
+	load_text()
+
 
 # Starts the progressive typing process
 func start_typing():
 	text = ""
-	load_text()
 	text_head_index = -1
 	paragraph = paragraphs_array.pop_front()
 	timer_node.set_wait_time(0.1 * (1 / text_speed))

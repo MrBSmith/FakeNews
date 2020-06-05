@@ -1,4 +1,5 @@
 extends NinePatchRect
+class_name ButtonBase
 
 func set_text(text: String):
 	if text.length() != 1:

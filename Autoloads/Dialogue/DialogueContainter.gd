@@ -1,6 +1,5 @@
 extends AutoloadBase
 
-onready var dialogue_box_scene = preload("res://Scenes/Bubble/Bubble.tscn")
 onready var translations_path_array = ProjectSettings.get_setting("locale/translations")
 
 var current_translation : Translation setget set_current_translation, get_current_translation
@@ -25,6 +24,9 @@ func get_dialogue_key(index: int) -> String:
 	return key
 
 
+func get_answer_key(dial_index : int, answer_id: int) -> String:
+	return get_dialogue_key(dial_index) + "_" + String(answer_id)
+
 #### BUILT-IN ####
 
 func _ready():
@@ -46,10 +48,3 @@ func get_translation_by_locale(locale: String) -> Translation:
 		if trans.get_locale() == locale:
 			return trans
 	return null
-
-
-func instanciate_dialogue_box(index : int):
-	var box_node = dialogue_box_scene.instance()
-	box_node.dialogue_key = get_dialogue_key(index)
-	var GUI_node = get_tree().get_current_scene().find_node("GUI")
-	GUI_node.call_deferred("add_child", box_node)
