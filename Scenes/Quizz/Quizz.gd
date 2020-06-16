@@ -4,18 +4,39 @@ onready var dialogue_box_scene = preload("res://Scenes/Bubble/Bubble.tscn")
 onready var answer_scene = preload("res://Scenes/Button/Answer/Answer.tscn")
 onready var submit_scene = preload("res://Scenes/Button/Submit/Submit.tscn")
 
-onready var portrait_node = $GUI/UI/Questions/Portrait
-
+onready var portrait_node = $GUI/UI/Portrait
 
 var dialogue_index : int = 0
 
 func _ready():
 	var _err = $Timer.connect("timeout", self, "on_timer_timeout")
 	generate_question()
-	
-	
+
+
 func get_portait_key(index: int) -> String:
 	return "PORT_QUIZZ_" + String(index)
+
+
+
+func instanciate_reaction(right_answer: bool):
+	if right_answer:
+		var points_node = $GUI/Points
+		points_node.add_to_points(1)
+	
+	next_question()
+
+
+func next_question():
+	destroy_current_question()
+	generate_question()
+
+
+func destroy_current_question():
+	for answer in $GUI/UI/Answers.get_children():
+		answer.queue_free()
+	
+	for question in $GUI/UI/Questions.get_children():
+		question.queue_free()
 
 
 func generate_question():
@@ -83,10 +104,4 @@ func on_submit(right_answer : bool):
 
 
 func on_timer_timeout():
-	generate_question()
-
-
-func instanciate_reaction(right_answer: bool):
-	if right_answer:
-		var points_node = $GUI/Points
-		points_node.add_to_points(1)
+	next_question()

@@ -1,13 +1,14 @@
 extends Label
 
-var mouse_inside : bool = false
-
 signal pressed
 
 const PRESSED = Color.green
 const OVER = Color.red
-const DISSABLED = Color.green
+const DISSABLED = Color.gray
 const NORMAL = Color.black
+
+var mouse_inside : bool = false
+var is_pressed : bool = false
 
 func _ready():
 	set_modulate(NORMAL)
@@ -16,20 +17,25 @@ func _ready():
 
 
 func on_mouse_entered():
-	set_modulate(OVER)
+	if !is_pressed:
+		set_modulate(OVER)
+	
 	mouse_inside = true
 
 
 func on_mouse_exited():
-	set_modulate(NORMAL)
+	if !is_pressed:
+		set_modulate(NORMAL)
+	
 	mouse_inside = false
 
 
 func _input(event):
-	if !event is InputEventMouseButton:
-		 return
-	
-	if mouse_inside:
+	if mouse_inside && event is InputEventMouseButton:
 		if event.button_index == BUTTON_LEFT and event.pressed:
-			emit_signal("pressed")
-			set_modulate(NORMAL)
+			is_pressed = !is_pressed
+			if is_pressed:
+				emit_signal("pressed")
+				set_modulate(PRESSED)
+			else:
+				set_modulate(OVER)

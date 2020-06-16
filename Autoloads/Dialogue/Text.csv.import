@@ -2,14 +2,11 @@
 
 importer="csv_translation"
 type="Translation"
+valid=false
 
 [deps]
 
-files=[ "res://Autoloads/Dialogue/Text.fr.translation", "res://Autoloads/Dialogue/Text.en.translation" ]
-
 source_file="res://Autoloads/Dialogue/Text.csv"
-dest_files=[ "res://Autoloads/Dialogue/Text.fr.translation", "res://Autoloads/Dialogue/Text.en.translation" ]
-
 [params]
 
 compress=true
