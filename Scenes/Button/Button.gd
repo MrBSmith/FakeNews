@@ -6,7 +6,7 @@ func _ready():
 
 func set_text(text: String):
 	if text.length() != 1:
-		_set_size(Vector2(16 + 8 * text.length(), 16))
+		_set_size(Vector2(5 * text.length(), 16))
 		$Button.set_size(Vector2(8 * text.length(), 16))
 	$Button.set_text(text)
 

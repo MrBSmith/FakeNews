@@ -8,6 +8,8 @@ onready var tween_node = $Tween
 var dialogue_key : String = ""
 
 func _ready():
+	set_modulate(Color.transparent)
+	
 	appear()
 	$RichTextLabel.start_typing()
 	yield($RichTextLabel, "finished_typing")

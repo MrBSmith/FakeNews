@@ -21,8 +21,8 @@ tracks/0/keys = {
 }
 
 [node name="Button" type="NinePatchRect"]
-margin_left = 16.0
-margin_top = 16.0
+margin_right = 16.0
+margin_bottom = 16.0
 grow_horizontal = 2
 grow_vertical = 2
 rect_min_size = Vector2( 16, 16 )
@@ -37,14 +37,10 @@ __meta__ = {
 }
 
 [node name="Button" type="Button" parent="."]
-anchor_left = 0.125
-anchor_top = 0.062
-anchor_right = 0.125
-anchor_bottom = 0.062
-margin_left = -2.56382
-margin_top = -2.55582
-margin_right = 16.4362
-margin_bottom = 16.4442
+margin_left = -1.0
+margin_top = -2.0
+margin_right = 18.0
+margin_bottom = 17.0
 custom_fonts/font = ExtResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 1, 0, 0, 1 )
@@ -53,6 +49,7 @@ action_mode = 0
 text = "A"
 flat = true
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 

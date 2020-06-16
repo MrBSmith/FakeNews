@@ -26,18 +26,23 @@ func generate_question():
 
 
 func instanciate_dialogue_box(index : int):
-	var box_node = dialogue_box_scene.instance()
-	box_node.dialogue_key = DIALOGUE.get_dialogue_key(index)
-	
+	# Change the portrait accordingly
 	var portrait_name = DIALOGUE.get_current_translation().get_message(get_portait_key(index))
 	portrait_node.set_portrait(portrait_name)
 	portrait_node.appear()
+	
+	yield(portrait_node.get_node("AnimationPlayer"), "animation_finished")
+	
+	# Instanciate the question
+	var box_node = dialogue_box_scene.instance()
+	box_node.dialogue_key = DIALOGUE.get_dialogue_key(index)
 	
 	var questions_node = get_tree().get_current_scene().find_node("Questions")
 	var container_size : Vector2 = questions_node.get_size()
 	var box_size : Vector2 = box_node.get_size()
 	
 	box_node.set_position(container_size / 2 - box_size / 2)
+	box_node.rect_position.x += 50
 	
 	questions_node.call_deferred("add_child", box_node)
 

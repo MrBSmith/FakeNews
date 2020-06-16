@@ -1,28 +1,68 @@
 ﻿keys;fr;en
 ;;
-PORT_QUIZZ_1;Montagnier;Montagnier
-PORT_QUIZZ_2;Montagnier;Montagnier
-PORT_QUIZZ_3;Montagnier;Montagnier
-PORT_QUIZZ_4;Montagnier;Montagnier
-PORT_QUIZZ_5;Montagnier;Montagnier
-PORT_QUIZZ_6;Montagnier;Montagnier
-PORT_QUIZZ_7;Montagnier;Montagnier
-PORT_QUIZZ_8;Montagnier;Montagnier
-PORT_QUIZZ_9;Montagnier;Montagnier
-PORT_QUIZZ_10;Montagnier;Montagnier
+PORT_QUIZZ_1;;Raoult
+PORT_QUIZZ_2;;Raoult
+PORT_QUIZZ_3;;Raoult
+PORT_QUIZZ_4;;JJCC
+PORT_QUIZZ_5;;JJCC
+PORT_QUIZZ_6;;Montagnier
+PORT_QUIZZ_7;;Montagnier
+PORT_QUIZZ_8;;Casasnovas
+PORT_QUIZZ_9;;Casasnovas
+PORT_QUIZZ_10;;Casasnovas
 ;;
-DIAL_QUIZZ_1;Pouet;Here you are, my sublime creations! I really would like to introduce you to this brand new world you don't know yet, but, well… This facility is about to blow up! A turbine of Xion -the gaz fueling the factory- broke up, so a massive cloud of Xion is about to destroy everything here. I just had time to wake you, so you will have to learn everything on the fly. But don't worry too much for now, I have restrainted the gaz leak to the engine room. This room is safe. 
-DIAL_QUIZZ_2;;I've prepared some of my minions to show you the way. They will learn you everything you need to know, more or less. They are dumb as hell, but well it will have to do.
-DIAL_QUIZZ_3;;Well, nervemind what I said before: This room is NOT safe. Now stay as far as you can from the Xion cloud and RUN!
-DIAL_QUIZZ_4;;Do you see these purple crates? DON'T TOUCH IT! This is where I stock my precious Xion energy.
-DIAL_QUIZZ_5;;You see that blue flame that you've just lit ?! That's how my little time machine works. It can gets you back to the last blue flame you've met. Make sure not to miss the next ones!
-DIAL_QUIZZ_6;;The exit is near! All you need to do is to trigger the buttons and the door will open. But you won't be safer in the next area: continue running fast or the Xion will fry your precious circuits.
-DIAL_QUIZZ_7;;
-DIAL_QUIZZ_8;;
-DIAL_QUIZZ_9;;
+DIAL_QUIZZ_1;;Grace a l'hydroxychloroquine , il y a moins de morts a Marseille qu'a Paris.
+DIAL_QUIZZ_2;;(Sur le traitement a base d'hydoxuchloroquine) Les chinois avaient déjà prouvé l'éfficacité sur le SRAS, et recement ils ont montrés l'efficacité sur le COVID.
+DIAL_QUIZZ_3;;Quand on a montré qu'un médicament marchait sur une centaine de personne [...] et qu'il y a des andouilles qui disent qu'on est pas surs que ca marche, ca ne m'interese pas.
+DIAL_QUIZZ_4;;Au Danemark, ils viennent de voter une loi qui permettra aux danois de sortir du confinement à condition qu'ils acceptent de se faire vacciner par le futur vaccin contre le corona virus.
+DIAL_QUIZZ_5;;Si au moment des premières campagnes de vaccination, on a un pic de mortalité, les médias dominants et l'OMS vont l'attribuer a la virulance subite du COVID, alors qu'il se pourrait très bien que ce soit les dégats causés par un vaccin, dont une partie de la composition a été déclarée scret défense.
+DIAL_QUIZZ_6;;Le coronavirus contient des séquences d'un autre virus [...]: le VIH, le virus du SIDA.
+DIAL_QUIZZ_7;;Le virus a été fabriqué en laboratoire, en Chine, et les ondes 5G y jouent un rôle.
+DIAL_QUIZZ_8;;Il faut jeûner et manger cru pour se proteger du virus tout comme il faut se rapprocher des gens plutôt que de limiter les contacts physiques.
+DIAL_QUIZZ_9;;Est-ce que je connais des gens qui ont une hygiène de vie correcte [...] et qui ont été touchés par le COVID? A priori non, je n'en connais pas, et ca me parait impossible.
 DIAL_QUIZZ_10;;
 ;;
-DIAL_QUIZZ_1_0;;Pouet1
-DIAL_QUIZZ_1_1;;Pouet2
-DIAL_QUIZZ_1_2;;Pouet3[v]
-DIAL_QUIZZ_1_3;;Pouet4
+DIAL_QUIZZ_1_0;;Il peut y avoir bien d'autres facteurs que le traitement a l'hydroxychloroquine qui expliquent cette difference.[v]
+DIAL_QUIZZ_1_1;;Les chiffres n'ont pas de source fiable.[v]
+DIAL_QUIZZ_1_2;;Marseille a de meilleurs hopitaux que Paris.
+DIAL_QUIZZ_1_3;;Cette affirmation n'a rien de faux/trompeur.
+;;
+DIAL_QUIZZ_2_0;;Ces résultats sont obtenu seulement in vitro (Et non sur un organisme vivant).[v]
+DIAL_QUIZZ_2_1;;Les études dont il parle sont controversés.[v]
+DIAL_QUIZZ_2_2;;Il n'y a pas eu de preuve de l'efficacité de l'hydorxychloroquine contre le SRAS.
+DIAL_QUIZZ_2_3;;Cette affirmation n'a rien de faux/trompeur.
+;;
+DIAL_QUIZZ_3_0;;Une étude qui porte sur 100 personne n'est jamais une preuve suffisante pour l'eficacité d'un médicament.[v]
+DIAL_QUIZZ_3_1;;Son étude a été menée sans groupe témoins, les données recoltés ne peuvent donc être comparé a aucune autres.[v]
+DIAL_QUIZZ_3_2;;L'étude n'est pas randomisée, elle est donc soumise au biais des chercheurs ainsi qu'aux effets contextuels sur les patients (Effet placebo...).[v]
+DIAL_QUIZZ_3_3;;Cette affirmation n'a rien de faux/trompeur.
+;;
+DIAL_QUIZZ_4_0;;La loi dit en réalité que le ministère peut décider de rendre un vaccin obligatoire localement (Sans lien avec le confinement).[v]
+DIAL_QUIZZ_4_1;;Le futur vaccin (Si il est un jour découvert), ne pourrait être généralisé que dans de nombreux mois, c’est-à-dire bien après la fin prévue du confinement au Danemark.[v]
+DIAL_QUIZZ_4_2;;Il n'y a pas de confinement au Danemark.
+DIAL_QUIZZ_4_3;;Cette affirmation n'a rien de faux/trompeur.
+;;
+DIAL_QUIZZ_5_0;;"C'est un procès d'intention: son argument se base sur des faits qui ""pourraient"" avoir lieu.[v]"
+DIAL_QUIZZ_5_1;;Le vaccin n'existe pas encore, sa composition n'a pas pu être déclaré secret défense.[v]
+DIAL_QUIZZ_5_2;;
+DIAL_QUIZZ_5_3;;Cette affirmation n'a rien de faux/trompeur.
+;;
+DIAL_QUIZZ_6_0;;La séquence dont il parle se retrouve en réalité dans de nombreux virus (Elle est assez banale).[v]
+DIAL_QUIZZ_6_1;;Le virus n'a pas de séquence commune avec le VIH.
+DIAL_QUIZZ_6_2;;C'est un prix nobel il faut donc lui faire confiance.
+DIAL_QUIZZ_6_3;;Cette affirmation n'a rien de faux/trompeur.
+;;
+DIAL_QUIZZ_7_0;;Il n'y a aucune preuve ou indice qui permette d'accuser un laboratoire chinois d'avoir crée le virus.[v]
+DIAL_QUIZZ_7_1;;Il n'y a aucun rapport entre les ondes 5G et les virus et leur transmision.[v]
+DIAL_QUIZZ_7_2;;C'est un prix nobel il faut donc lui faire confiance.
+DIAL_QUIZZ_7_3;;Cette affirmation n'a rien de faux/trompeur.
+;;
+DIAL_QUIZZ_8_0;;Il n'y a aucune efficacité démontré du jeûne et du crudivorisme pour se protéger du virus.[v]
+DIAL_QUIZZ_8_1;;Le virus se transmet par des microgoutellettes (Salive, réspiration), il faut donc éviter au maximum les contacts physiques.[v]
+DIAL_QUIZZ_8_2;;Jeûner et manger cru aident a renforcer les défenses immunitaires, et permettent donc de se protéger éfficacement du virus.
+DIAL_QUIZZ_8_3;;Cette affirmation n'a rien de faux/trompeur.
+;;
+DIAL_QUIZZ_8_0;;Il n'y a aucun rapport direct entre l'hygiène de vie et la transmition du virus.[v]
+DIAL_QUIZZ_8_1;;"L'une des proches de Thierry Casasnovas dit elle-même avoir été atteinte et s'être ""soignée"" a l'aide du crudivorisme et de ""purges"".[v]"
+DIAL_QUIZZ_8_2;;Une bonne hygiène protège efficacement du virus.
+DIAL_QUIZZ_8_3;;Cette affirmation n'a rien de faux/trompeur.
