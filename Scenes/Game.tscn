@@ -1,6 +1,26 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scenes/Quizz/Quizz.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Quizz/UI.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/Quizz/Points.gd" type="Script" id=3]
+[ext_resource path="res://Global/Fonts/BoldCapsPixel48.tres" type="DynamicFont" id=4]
+[ext_resource path="res://Scenes/Portraits/Portrait.gd" type="Script" id=5]
+[ext_resource path="res://Scenes/Portraits/Montagnier.png" type="Texture" id=6]
+
+[sub_resource type="Animation" id=1]
+resource_name = "Appear"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -131.575, 116.749 ), Vector2( 150, 116.749 ) ]
+}
 
 [node name="Quizz" type="Node2D"]
 script = ExtResource( 1 )
@@ -13,6 +33,7 @@ wait_time = 30.0
 [node name="UI" type="Control" parent="GUI"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -25,14 +46,33 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Portrait" type="Sprite" parent="GUI/UI/Questions"]
+position = Vector2( -131.575, 116.749 )
+texture = ExtResource( 6 )
+script = ExtResource( 5 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="GUI/UI/Questions/Portrait"]
+anims/Appear = SubResource( 1 )
+
 [node name="Answers" type="Control" parent="GUI/UI"]
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 margin_left = -217.5
-margin_top = -190.0
+margin_top = -189.143
 margin_right = 217.5
+margin_bottom = 0.857391
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Points" type="Label" parent="GUI"]
+margin_right = 40.0
+margin_bottom = 14.0
+custom_fonts/font = ExtResource( 4 )
+text = "Points: "
+script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

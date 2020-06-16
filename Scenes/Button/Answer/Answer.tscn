@@ -5,3 +5,6 @@
 
 [node name="Answer" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
+
+[node name="Button" parent="." index="0"]
+custom_colors/font_color_pressed = Color( 0, 0.298039, 1, 1 )

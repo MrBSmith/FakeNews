@@ -36,19 +36,22 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="."]
+[node name="Button" type="Button" parent="."]
 anchor_left = 0.125
 anchor_top = 0.062
 anchor_right = 0.125
 anchor_bottom = 0.062
-margin_top = 0.00799996
-margin_right = 14.0
-margin_bottom = 13.008
+margin_left = -2.56382
+margin_top = -2.55582
+margin_right = 16.4362
+margin_bottom = 16.4442
 custom_fonts/font = ExtResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 1, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 1, 0, 0, 1 )
+action_mode = 0
 text = "A"
-align = 1
-valign = 1
+flat = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
