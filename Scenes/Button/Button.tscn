@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scenes/Button/Button.png" type="Texture" id=1]
 [ext_resource path="res://Global/Fonts/BoldCapsPixel24.tres" type="DynamicFont" id=2]
 [ext_resource path="res://Scenes/Button/Button.gd" type="Script" id=3]
+[ext_resource path="res://Scenes/Button/Label.gd" type="Script" id=4]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Fade"
@@ -36,20 +37,16 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Button" type="Button" parent="."]
-margin_left = -1.0
-margin_top = -2.0
+[node name="Label" type="Label" parent="."]
 margin_right = 18.0
-margin_bottom = 17.0
+margin_bottom = 16.0
+mouse_filter = 1
 custom_fonts/font = ExtResource( 2 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_colors/font_color_hover = Color( 1, 0, 0, 1 )
-custom_colors/font_color_pressed = Color( 1, 0, 0, 1 )
-action_mode = 0
 text = "A"
-flat = true
+align = 1
+valign = 1
+script = ExtResource( 4 )
 __meta__ = {
-"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 

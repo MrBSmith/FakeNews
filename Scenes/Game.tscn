@@ -19,7 +19,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( -131.575, 116.749 ), Vector2( 150, 116.749 ) ]
+"values": [ Vector2( -131.575, 90 ), Vector2( 150, 90 ) ]
 }
 
 [node name="Quizz" type="Node2D"]
@@ -33,6 +33,7 @@ wait_time = 30.0
 [node name="UI" type="Control" parent="GUI"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 2
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -42,12 +43,13 @@ __meta__ = {
 anchor_right = 1.0
 anchor_bottom = 0.5
 margin_bottom = -1.0
+mouse_filter = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Portrait" type="Sprite" parent="GUI/UI/Questions"]
-position = Vector2( -131.575, 116.749 )
+position = Vector2( -131.575, 75 )
 texture = ExtResource( 6 )
 script = ExtResource( 5 )
 
@@ -55,14 +57,11 @@ script = ExtResource( 5 )
 anims/Appear = SubResource( 1 )
 
 [node name="Answers" type="Control" parent="GUI/UI"]
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
+anchor_top = 0.444
+anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -217.5
-margin_top = -189.143
-margin_right = 217.5
-margin_bottom = 0.857391
+margin_top = 0.159988
+mouse_filter = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }

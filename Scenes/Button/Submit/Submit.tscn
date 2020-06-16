@@ -4,11 +4,13 @@
 [ext_resource path="res://Scenes/Button/Submit/Submit.gd" type="Script" id=2]
 
 [node name="Submit" instance=ExtResource( 1 )]
-margin_left = 0.0
-margin_top = 0.0
 margin_right = 45.0
-margin_bottom = 16.0
 script = ExtResource( 2 )
 
-[node name="Button" parent="." index="0"]
+[node name="Label" parent="." index="0"]
+margin_left = 7.68591
+margin_top = -0.244173
+margin_right = 37.6859
+margin_bottom = 15.7558
 text = "Valider"
+align = 1
