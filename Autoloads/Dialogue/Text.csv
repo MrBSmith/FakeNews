@@ -25,44 +25,44 @@ DIAL_QUIZZ_9;;Est-ce que je connais des gens qui ont une hygiène de vie correct
 DIAL_QUIZZ_1_0;;Il peut y avoir bien d'autres facteurs que le traitement a l'hydroxychloroquine qui expliquent cette difference.[v]
 DIAL_QUIZZ_1_1;;Les chiffres n'ont pas de source fiable.[v]
 DIAL_QUIZZ_1_2;;Marseille a de meilleurs hopitaux que Paris.
-DIAL_QUIZZ_1_3;;Cette affirmation n'a rien de faux/trompeur.
+DIAL_QUIZZ_1_3;;Cette affirmation n'a rien de faux ou de trompeur.
 ;;
 DIAL_QUIZZ_2_0;;Ces résultats sont obtenu seulement in vitro (Et non sur un organisme vivant).[v]
 DIAL_QUIZZ_2_1;;Les études dont il parle sont controversés.[v]
 DIAL_QUIZZ_2_2;;Il n'y a pas eu de preuve de l'efficacité de l'hydorxychloroquine contre le SRAS.
-DIAL_QUIZZ_2_3;;Cette affirmation n'a rien de faux/trompeur.
+DIAL_QUIZZ_2_3;;Cette affirmation n'a rien de faux ou de trompeur.
 ;;
 DIAL_QUIZZ_3_0;;Une étude qui porte sur 100 personne n'est jamais une preuve suffisante pour l'eficacité d'un médicament.[v]
 DIAL_QUIZZ_3_1;;Son étude a été menée sans groupe témoins, les données recoltés ne peuvent donc être comparé a aucune autres.[v]
 DIAL_QUIZZ_3_2;;L'étude n'est pas randomisée, elle est donc soumise au biais des chercheurs ainsi qu'aux effets contextuels sur les patients (Effet placebo...).[v]
-DIAL_QUIZZ_3_3;;Cette affirmation n'a rien de faux/trompeur.
+DIAL_QUIZZ_3_3;;Cette affirmation n'a rien de faux ou de trompeur.
 ;;
 DIAL_QUIZZ_4_0;;La loi dit en réalité que le ministère peut décider de rendre un vaccin obligatoire localement (Sans lien avec le confinement).[v]
 DIAL_QUIZZ_4_1;;Le futur vaccin (Si il est un jour découvert), ne pourrait être généralisé que dans de nombreux mois, c’est-à-dire bien après la fin prévue du confinement au Danemark.[v]
 DIAL_QUIZZ_4_2;;Il n'y a pas de confinement au Danemark.
-DIAL_QUIZZ_4_3;;Cette affirmation n'a rien de faux/trompeur.
+DIAL_QUIZZ_4_3;;Cette affirmation n'a rien de faux ou de trompeur.
 ;;
 DIAL_QUIZZ_5_0;;"C'est un procès d'intention: son argument se base sur des faits qui ""pourraient"" avoir lieu.[v]"
 DIAL_QUIZZ_5_1;;Le vaccin n'existe pas encore, sa composition n'a pas pu être déclaré secret défense.[v]
 DIAL_QUIZZ_5_2;;
-DIAL_QUIZZ_5_3;;Cette affirmation n'a rien de faux/trompeur.
+DIAL_QUIZZ_5_3;;Cette affirmation n'a rien de faux ou de trompeur.
 ;;
 DIAL_QUIZZ_6_0;;La séquence dont il parle se retrouve en réalité dans de nombreux virus (Elle est assez banale).[v]
 DIAL_QUIZZ_6_1;;Le virus n'a pas de séquence commune avec le VIH.
 DIAL_QUIZZ_6_2;;C'est un prix nobel il faut donc lui faire confiance.
-DIAL_QUIZZ_6_3;;Cette affirmation n'a rien de faux/trompeur.
+DIAL_QUIZZ_6_3;;Cette affirmation n'a rien de faux ou de trompeur.
 ;;
 DIAL_QUIZZ_7_0;;Il n'y a aucune preuve ou indice qui permette d'accuser un laboratoire chinois d'avoir crée le virus.[v]
 DIAL_QUIZZ_7_1;;Il n'y a aucun rapport entre les ondes 5G et les virus et leur transmision.[v]
 DIAL_QUIZZ_7_2;;C'est un prix nobel il faut donc lui faire confiance.
-DIAL_QUIZZ_7_3;;Cette affirmation n'a rien de faux/trompeur.
+DIAL_QUIZZ_7_3;;Cette affirmation n'a rien de faux ou de trompeur.
 ;;
 DIAL_QUIZZ_8_0;;Il n'y a aucune efficacité démontré du jeûne et du crudivorisme pour se protéger du virus.[v]
 DIAL_QUIZZ_8_1;;Le virus se transmet par des microgoutellettes (Salive, réspiration), il faut donc éviter au maximum les contacts physiques.[v]
 DIAL_QUIZZ_8_2;;Jeûner et manger cru aident a renforcer les défenses immunitaires, et permettent donc de se protéger éfficacement du virus.
-DIAL_QUIZZ_8_3;;Cette affirmation n'a rien de faux/trompeur.
+DIAL_QUIZZ_8_3;;Cette affirmation n'a rien de faux ou de trompeur.
 ;;
-DIAL_QUIZZ_8_0;;Il n'y a aucun rapport direct entre l'hygiène de vie et la transmition du virus.[v]
-DIAL_QUIZZ_8_1;;"L'une des proches de Thierry Casasnovas dit elle-même avoir été atteinte et s'être ""soignée"" a l'aide du crudivorisme et de ""purges"".[v]"
-DIAL_QUIZZ_8_2;;Une bonne hygiène protège efficacement du virus.
-DIAL_QUIZZ_8_3;;Cette affirmation n'a rien de faux/trompeur.
+DIAL_QUIZZ_9_0;;Il n'y a aucun rapport direct entre l'hygiène de vie et la transmition du virus.[v]
+DIAL_QUIZZ_9_1;;"L'une des proches de Thierry Casasnovas dit elle-même avoir été atteinte et s'être ""soignée"" a l'aide du crudivorisme et de ""purges"".[v]"
+DIAL_QUIZZ_9_2;;Une bonne hygiène protège efficacement du virus.
+DIAL_QUIZZ_9_3;;Cette affirmation n'a rien de faux ou de trompeur.

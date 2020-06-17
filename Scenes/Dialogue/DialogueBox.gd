@@ -39,7 +39,6 @@ func stop_typing():
 func load_text():
 	var key = owner.dialogue_key
 	entire_text = DIALOGUE.get_current_translation().get_message(key)
-	entire_text = DIALOGUE.remove_accents(entire_text)
 	split_in_paragraphs(entire_text)
 
 

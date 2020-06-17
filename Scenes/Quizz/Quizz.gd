@@ -27,7 +27,7 @@ func _ready():
 	for i in range(nb_questions):
 		question_index_array.append(i + 1)
 	
-	next_question()
+	generate_question()
 
 
 func get_portait_key(index: int) -> String:
@@ -45,10 +45,7 @@ func instanciate_reaction(right_answer: bool):
 
 func next_question():
 	destroy_current_question()
-	
-	var rng = randi() % question_index_array.size()
-	dialogue_index = question_index_array[rng]
-	question_index_array.remove(rng)
+	yield(portrait_node.get_node("AnimationPlayer"), "animation_finished")
 	
 	generate_question()
 
@@ -60,9 +57,15 @@ func destroy_current_question():
 	for question in $GUI/UI/Questions.get_children():
 		question.queue_free()
 	
+	portrait_node.disappear()
+	
 	speaker_name_node.text = ""
 
 func generate_question():
+	var rng = randi() % question_index_array.size()
+	dialogue_index = question_index_array[rng]
+	question_index_array.remove(rng)
+	
 	instanciate_dialogue_box(dialogue_index)
 	instanciate_responses(dialogue_index)
 	$Timer.start()
@@ -76,7 +79,7 @@ func instanciate_dialogue_box(index : int):
 	
 	yield(portrait_node.get_node("AnimationPlayer"), "animation_finished")
 	
-	speaker_name_node.text = DIALOGUE.remove_accents(speakers_dic.get(portrait_name))
+	speaker_name_node.text = speakers_dic.get(portrait_name)
 	
 	# Instanciate the question
 	var box_node = dialogue_box_scene.instance()
@@ -113,7 +116,7 @@ func instanciate_responses(dial_index : int):
 			answer_button.set_key(answer_key)
 			
 			var button_size = answer_button.get_size()
-			var button_pos = container_size * (Vector2((j + 1), (i + 1)) / 3) - button_size / 2
+			var button_pos = Vector2(container_size.x / 2 * (j + 0.5), container_size.y / 3 * (i + 1))- button_size / 2
 			
 			answer_button.set_position(button_pos)
 			answer_container_node.call_deferred("add_child", answer_button) 

@@ -1,14 +1,13 @@
 extends NinePatchRect
 class_name ButtonBase
 
-var max_chars_lenght : int = 40
+var max_chars_lenght : int = 50
 
 func _ready():
 	var _err = $Label.connect("pressed", self, "on_pressed")
 
 func set_text(text: String):
 	text = split_in_lines(text, max_chars_lenght)
-	text = DIALOGUE.remove_accents(text)
 	var nb_line = text.count("\n", 0, 0) + 1
 	var text_box_size := Vector2.ZERO
 	
