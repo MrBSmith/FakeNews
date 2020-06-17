@@ -5,6 +5,8 @@ var margin = Vector2(8, 8)
 onready var animation_player_node = $AnimationPlayer
 onready var tween_node = $Tween
 
+export var infinite_read_time : bool = true
+
 var dialogue_key : String = ""
 
 func _ready():

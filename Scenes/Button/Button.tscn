@@ -38,8 +38,10 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="."]
-margin_right = 18.0
-margin_bottom = 16.0
+margin_left = 1.87496
+margin_top = 1.15284
+margin_right = 15.875
+margin_bottom = 14.1528
 mouse_filter = 1
 custom_fonts/font = ExtResource( 2 )
 text = "A"

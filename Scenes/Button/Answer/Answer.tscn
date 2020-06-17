@@ -5,3 +5,10 @@
 
 [node name="Answer" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
+
+[node name="Label" parent="." index="0"]
+margin_left = 0.298321
+margin_top = 0.795523
+margin_right = 17.2983
+margin_bottom = 17.7955
+valign = 0

@@ -1,6 +1,6 @@
 extends RichTextLabel
 
-onready var timer_node = $TypeInTimer
+onready var typein_timer_node = $TypeInTimer
 onready var reading_timer_node = $ReadingTimer
 
 export var text_speed : float = 4
@@ -13,7 +13,7 @@ var paragraph : String = ""
 signal finished_typing
 
 func _ready():
-	var _err = timer_node.connect("timeout", self, "on_timer_timeout")
+	var _err = typein_timer_node.connect("timeout", self, "on_timer_timeout")
 	_err = reading_timer_node.connect("timeout", self, "on_reading_timer_timeout")
 	load_text()
 
@@ -23,14 +23,15 @@ func start_typing():
 	text = ""
 	text_head_index = -1
 	paragraph = paragraphs_array.pop_front()
-	timer_node.set_wait_time(0.1 * (1 / text_speed))
-	timer_node.start()
+	typein_timer_node.set_wait_time(0.1 * (1 / text_speed))
+	typein_timer_node.start()
 
 
 # Stops the progressive typing process
 func stop_typing():
-	reading_timer_node.start()
-	timer_node.stop()
+	if owner.infinite_read_time == false:
+		reading_timer_node.start()
+	typein_timer_node.stop()
 	set_process(false)
 
 
@@ -38,7 +39,20 @@ func stop_typing():
 func load_text():
 	var key = owner.dialogue_key
 	entire_text = DIALOGUE.get_current_translation().get_message(key)
+	entire_text = remove_accents(entire_text)
 	split_in_paragraphs(entire_text)
+
+
+
+func remove_accents(text: String) -> String:
+	text = text.replace("é" , "e")
+	text = text.replace("è" , "e")
+	text = text.replace("ê" , "e")
+	text = text.replace("à" , "a")
+	text = text.replace("â" , "a")
+	text = text.replace("ô" , "o")
+	
+	return text 
 
 
 # Split the given text in printable paragraphs
@@ -131,7 +145,7 @@ func on_timer_timeout():
 	text_head_index += 1
 	if text_head_index > paragraph.length() - 1:
 		text_head_index = paragraph.length() - 1
-		timer_node.stop()
+		typein_timer_node.stop()
 	
 	write_text(text_head_index)
 

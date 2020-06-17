@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Scenes/Quizz/Quizz.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Quizz/UI.gd" type="Script" id=2]
@@ -6,9 +6,12 @@
 [ext_resource path="res://Global/Fonts/BoldCapsPixel48.tres" type="DynamicFont" id=4]
 [ext_resource path="res://Scenes/Portraits/Portrait.gd" type="Script" id=5]
 [ext_resource path="res://Scenes/Portraits/Montagnier.png" type="Texture" id=6]
+[ext_resource path="res://Scenes/UI/Separation.png" type="Texture" id=7]
+[ext_resource path="res://Scenes/Portraits/Defakator.png" type="Texture" id=8]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Appear"
+length = 0.75
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
@@ -16,10 +19,39 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 1 ),
+"times": PoolRealArray( 0, 0.7 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( -131.575, 90 ), Vector2( 150, 90 ) ]
+"values": [ Vector2( -100, 110 ), Vector2( 150, 110 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "Appear"
+length = 0.3
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 542.789, 423.893 ), Vector2( 542.337, 310 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.2, 0.25, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.179, 0.876 ), Vector2( 1, 1 ) ]
 }
 
 [node name="Quizz" type="Node2D"]
@@ -59,16 +91,36 @@ __meta__ = {
 }
 
 [node name="Portrait" type="Sprite" parent="GUI/UI"]
-position = Vector2( -131.575, 75 )
+position = Vector2( -100, 110 )
 texture = ExtResource( 6 )
 script = ExtResource( 5 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="GUI/UI/Portrait"]
 anims/Appear = SubResource( 1 )
 
+[node name="Separation" type="TextureRect" parent="GUI/UI"]
+modulate = Color( 0.14902, 0.219608, 0.278431, 1 )
+margin_left = 0.37735
+margin_top = 177.802
+margin_right = 273.377
+margin_bottom = 188.802
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Defakator" type="Sprite" parent="GUI/UI"]
+position = Vector2( 542.789, 423.893 )
+texture = ExtResource( 8 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="GUI/UI/Defakator"]
+anims/Appear = SubResource( 2 )
+
 [node name="Points" type="Label" parent="GUI"]
-margin_right = 40.0
-margin_bottom = 14.0
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -129.0
+margin_bottom = 38.0
 custom_fonts/font = ExtResource( 4 )
 text = "Points: "
 script = ExtResource( 3 )

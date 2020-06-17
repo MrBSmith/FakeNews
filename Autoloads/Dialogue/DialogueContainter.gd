@@ -4,7 +4,7 @@ onready var translations_path_array = ProjectSettings.get_setting("locale/transl
 
 var current_translation : Translation setget set_current_translation, get_current_translation
 
-var default_locale : String = "en"
+var default_locale : String = "fr"
 
 #### ACCESSORS ####
 

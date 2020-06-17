@@ -8,11 +8,12 @@ func _ready():
 
 func set_text(text: String):
 	text = split_in_lines(text, max_chars_lenght)
+	text = remove_accents(text)
 	var nb_line = text.count("\n", 0, 0) + 1
 	var text_box_size := Vector2.ZERO
 	
 	if text.length() != 1:
-		text_box_size = Vector2(5 * clamp(text.length(), 1, max_chars_lenght), 10 * nb_line)
+		text_box_size = Vector2(5 * clamp(text.length(), 1, max_chars_lenght), 12 * nb_line)
 		_set_size(text_box_size)
 		rect_size.y = 12 * (nb_line + 1)
 		$Label.set_size(text_box_size)
@@ -55,6 +56,16 @@ func find_split_point(text: String, line_max_lenght: int = 30) -> int:
 	
 	return last_point
 
+
+func remove_accents(text: String) -> String:
+	text = text.replace("é" , "e")
+	text = text.replace("è" , "e")
+	text = text.replace("ê" , "e")
+	text = text.replace("à" , "a")
+	text = text.replace("â" , "a")
+	text = text.replace("ô" , "o")
+	
+	return text 
 
 func on_pressed():
 	pass
