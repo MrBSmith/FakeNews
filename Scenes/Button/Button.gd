@@ -8,7 +8,7 @@ func _ready():
 
 func set_text(text: String):
 	text = split_in_lines(text, max_chars_lenght)
-	text = remove_accents(text)
+	text = DIALOGUE.remove_accents(text)
 	var nb_line = text.count("\n", 0, 0) + 1
 	var text_box_size := Vector2.ZERO
 	
@@ -56,16 +56,6 @@ func find_split_point(text: String, line_max_lenght: int = 30) -> int:
 	
 	return last_point
 
-
-func remove_accents(text: String) -> String:
-	text = text.replace("é" , "e")
-	text = text.replace("è" , "e")
-	text = text.replace("ê" , "e")
-	text = text.replace("à" , "a")
-	text = text.replace("â" , "a")
-	text = text.replace("ô" , "o")
-	
-	return text 
 
 func on_pressed():
 	pass

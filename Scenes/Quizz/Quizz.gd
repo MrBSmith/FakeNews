@@ -4,12 +4,21 @@ onready var dialogue_box_scene = preload("res://Scenes/Bubble/Bubble.tscn")
 onready var answer_scene = preload("res://Scenes/Button/Answer/Answer.tscn")
 onready var submit_scene = preload("res://Scenes/Button/Submit/Submit.tscn")
 
+onready var speaker_name_node = $GUI/UI/Separation/SpeakerName
 onready var portrait_node = $GUI/UI/Portrait
 
 var dialogue_index : int = 0
 var nb_questions : int = 9
 
 var question_index_array : Array = []
+
+var speakers_dic = {
+	"Raoult" : "Didier Raoult (Microbiologiste)",
+	"Montagnier" : "Luc Montagnier (Prix Nobel de medecine)",
+	"Casasnovas" : "Thierry Casasnovas (Vidéaste)",
+	"JJCC" : "Jean-Jacques Crèvecoeur (Conférencier)"
+}
+
 
 func _ready():
 	var _err = $Timer.connect("timeout", self, "on_timer_timeout")
@@ -50,7 +59,8 @@ func destroy_current_question():
 	
 	for question in $GUI/UI/Questions.get_children():
 		question.queue_free()
-
+	
+	speaker_name_node.text = ""
 
 func generate_question():
 	instanciate_dialogue_box(dialogue_index)
@@ -65,6 +75,8 @@ func instanciate_dialogue_box(index : int):
 	portrait_node.appear()
 	
 	yield(portrait_node.get_node("AnimationPlayer"), "animation_finished")
+	
+	speaker_name_node.text = DIALOGUE.remove_accents(speakers_dic.get(portrait_name))
 	
 	# Instanciate the question
 	var box_node = dialogue_box_scene.instance()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scenes/Quizz/Quizz.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Quizz/UI.gd" type="Script" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Scenes/Portraits/Montagnier.png" type="Texture" id=6]
 [ext_resource path="res://Scenes/UI/Separation.png" type="Texture" id=7]
 [ext_resource path="res://Scenes/Portraits/Defakator.png" type="Texture" id=8]
+[ext_resource path="res://Global/Fonts/BoldCapsPixel24.tres" type="DynamicFont" id=9]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Appear"
@@ -99,12 +100,29 @@ script = ExtResource( 5 )
 anims/Appear = SubResource( 1 )
 
 [node name="Separation" type="TextureRect" parent="GUI/UI"]
-modulate = Color( 0.14902, 0.219608, 0.278431, 1 )
+self_modulate = Color( 0.14902, 0.219608, 0.278431, 1 )
 margin_left = 0.37735
 margin_top = 177.802
 margin_right = 273.377
 margin_bottom = 188.802
 texture = ExtResource( 7 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="SpeakerName" type="Label" parent="GUI/UI/Separation"]
+anchor_left = 0.069
+anchor_top = -0.137
+anchor_right = 0.501
+anchor_bottom = 1.101
+margin_left = 7.57772
+margin_top = -0.00242984
+margin_right = 7.64172
+margin_bottom = 0.379569
+custom_fonts/font = ExtResource( 9 )
+align = 1
+valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }

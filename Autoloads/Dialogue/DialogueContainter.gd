@@ -48,3 +48,16 @@ func get_translation_by_locale(locale: String) -> Translation:
 		if trans.get_locale() == locale:
 			return trans
 	return null
+
+
+
+func remove_accents(text: String) -> String:
+	text = text.replace("é" , "e")
+	text = text.replace("è" , "e")
+	text = text.replace("ê" , "e")
+	text = text.replace("à" , "a")
+	text = text.replace("â" , "a")
+	text = text.replace("ô" , "o")
+	text = text.replace("û", "u")
+	
+	return text 

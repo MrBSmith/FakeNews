@@ -39,20 +39,8 @@ func stop_typing():
 func load_text():
 	var key = owner.dialogue_key
 	entire_text = DIALOGUE.get_current_translation().get_message(key)
-	entire_text = remove_accents(entire_text)
+	entire_text = DIALOGUE.remove_accents(entire_text)
 	split_in_paragraphs(entire_text)
-
-
-
-func remove_accents(text: String) -> String:
-	text = text.replace("é" , "e")
-	text = text.replace("è" , "e")
-	text = text.replace("ê" , "e")
-	text = text.replace("à" , "a")
-	text = text.replace("â" , "a")
-	text = text.replace("ô" , "o")
-	
-	return text 
 
 
 # Split the given text in printable paragraphs
