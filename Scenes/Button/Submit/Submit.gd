@@ -10,4 +10,5 @@ func _ready():
 
 
 func on_pressed():
-	emit_signal("submit")
+	if get_parent().is_one_answer_pressed():
+		emit_signal("submit")

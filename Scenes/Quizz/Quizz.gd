@@ -4,6 +4,9 @@ onready var dialogue_box_scene = preload("res://Scenes/Bubble/Bubble.tscn")
 onready var answer_scene = preload("res://Scenes/Button/Answer/Answer.tscn")
 onready var submit_scene = preload("res://Scenes/Button/Submit/Submit.tscn")
 
+var good_answer_scene = preload("res://Scenes/Button/Answer/GoodAnswer.tscn")
+var bad_answer_scene = preload("res://Scenes/Button/Answer/BadAnswer.tscn")
+
 onready var speaker_name_node = $GUI/UI/Separation/SpeakerName
 onready var portrait_node = $GUI/UI/Portrait
 
@@ -35,10 +38,32 @@ func get_portait_key(index: int) -> String:
 
 
 
-func instanciate_reaction(right_answer: bool):
-	if right_answer:
-		var points_node = $GUI/Points
-		points_node.add_to_points(1)
+func instanciate_reaction():
+	var feedback : Label = null
+	var answer_group = $GUI/UI/Answers
+	
+	# Feedbacks
+	for answer in answer_group.get_children():
+		if answer is AnswerButton and answer.is_pressed:
+			if answer.is_valid:
+				feedback = good_answer_scene.instance()
+			else:
+				feedback = bad_answer_scene.instance()
+			
+			feedback.set_position(Vector2(answer.get_size().x / 2, 0))
+			answer.call_deferred("add_child", feedback)
+	
+	# Add points
+	var new_points = answer_group.count_good_answers()
+	$GUI/Points.add_to_points(new_points)
+	
+	# Play the sound accordingly to the situation
+	if new_points > 0:
+		$GoodSound.play()
+	else:
+		$BadSound.play()
+	
+	yield(feedback.get_node("AnimationPlayer"), "animation_finished")
 	
 	next_question()
 
@@ -129,8 +154,8 @@ func instanciate_submit(answer_container_node: Node, container_size: Vector2):
 	answer_container_node.call_deferred("add_child", submit_node)
 
 
-func on_submit(right_answer : bool):
-	instanciate_reaction(right_answer)
+func on_submit():
+	instanciate_reaction()
 
 
 func on_timer_timeout():

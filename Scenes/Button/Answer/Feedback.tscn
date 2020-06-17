@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/Button/Answer/Feedback.gd" type="Script" id=1]
+[ext_resource path="res://Global/Fonts/BoldCapsPixel24.tres" type="DynamicFont" id=2]
+
+[node name="Feedback" type="Label"]
+anchor_right = 0.27
+anchor_bottom = 0.147
+margin_right = 0.199997
+margin_bottom = 0.0800018
+custom_fonts/font = ExtResource( 2 )
+align = 1
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="."]

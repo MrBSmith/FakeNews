@@ -1,7 +1,8 @@
 extends NinePatchRect
 class_name ButtonBase
 
-var max_chars_lenght : int = 50
+export var max_chars_lenght : int = 50
+export var toggle_mode = false
 
 func _ready():
 	var _err = $Label.connect("pressed", self, "on_pressed")

@@ -5,6 +5,7 @@
 
 [node name="Answer" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
+toggle_mode = true
 
 [node name="Label" parent="." index="0"]
 margin_left = 0.298321

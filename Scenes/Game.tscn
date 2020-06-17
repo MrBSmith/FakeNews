@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Scenes/Quizz/Quizz.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Quizz/UI.gd" type="Script" id=2]
@@ -9,6 +9,9 @@
 [ext_resource path="res://Scenes/UI/Separation.png" type="Texture" id=7]
 [ext_resource path="res://Scenes/Portraits/Defakator.png" type="Texture" id=8]
 [ext_resource path="res://Global/Fonts/BoldCapsPixel24.tres" type="DynamicFont" id=9]
+[ext_resource path="res://Scenes/Quizz/Answers.gd" type="Script" id=10]
+[ext_resource path="res://Global/Sounds/Validation.ogg" type="AudioStream" id=11]
+[ext_resource path="res://Global/Sounds/Bad.wav" type="AudioStream" id=12]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Appear"
@@ -87,6 +90,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = 0.159988
 mouse_filter = 2
+script = ExtResource( 10 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -145,3 +149,10 @@ script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="GoodSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
+
+[node name="BadSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 12 )
+pitch_scale = 1.42

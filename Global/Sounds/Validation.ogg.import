@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Validation.ogg-6f68d13a53e21ad64b9ffb4168eb14ae.oggstr"
+
+[deps]
+
+source_file="res://Global/Sounds/Validation.ogg"
+dest_files=[ "res://.import/Validation.ogg-6f68d13a53e21ad64b9ffb4168eb14ae.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

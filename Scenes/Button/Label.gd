@@ -33,9 +33,12 @@ func on_mouse_exited():
 func _input(event):
 	if mouse_inside && event is InputEventMouseButton:
 		if event.button_index == BUTTON_LEFT and event.pressed:
-			is_pressed = !is_pressed
-			if is_pressed:
-				emit_signal("pressed")
+			if owner.toggle_mode:
+				is_pressed = !is_pressed
+				
+			emit_signal("pressed")
+			
+			if is_pressed && owner.toggle_mode:
 				set_modulate(PRESSED)
 			else:
 				set_modulate(OVER)
