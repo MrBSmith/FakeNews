@@ -30,6 +30,8 @@ func _ready():
 	for i in range(nb_questions):
 		question_index_array.append(i + 1)
 	
+	randomize()
+	
 	generate_question()
 
 
@@ -86,6 +88,7 @@ func destroy_current_question():
 	
 	speaker_name_node.text = ""
 
+
 func generate_question():
 	var rng = randi() % question_index_array.size()
 	dialogue_index = question_index_array[rng]
@@ -115,7 +118,7 @@ func instanciate_dialogue_box(index : int):
 	var box_size : Vector2 = box_node.get_size()
 	
 	box_node.set_position(container_size / 2 - box_size / 2)
-	box_node.rect_position.x += 30
+	box_node.rect_position.x += 10
 	box_node.rect_position.y -= 20
 	
 	questions_node.call_deferred("add_child", box_node)
